@@ -1,22 +1,51 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: hello-world-blue
   namespace: hello-world-ui
   labels:
     app: hello-world
+    color: blue           # Unique label for blue version
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: hello-world
+      color: blue        # Match label for blue version
   template:
     metadata:
       labels:
         app: hello-world
+        color: blue      # Label for pods in blue version
     spec:
       containers:
       - name: hello-world
-        image: nginx:latest
+        image: nginx:1.17  # Use a specific version for blue
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-green
+  namespace: hello-world-ui
+  labels:
+    app: hello-world
+    color: green          # Unique label for green version
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world
+      color: green       # Match label for green version
+  template:
+    metadata:
+      labels:
+        app: hello-world
+        color: green     # Label for pods in green version
+    spec:
+      containers:
+      - name: hello-world
+        image: nginx:latest  # Use the latest version for green
         ports:
         - containerPort: 80
