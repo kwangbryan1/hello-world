@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: nginx:1.18  # Use a specific version for blue
+        image: nginx:1.19  # Use a specific version for blue
         ports:
         - containerPort: 80
 ---
