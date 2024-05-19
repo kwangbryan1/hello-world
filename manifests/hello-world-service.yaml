@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hello-world
-  namespace: hello-world-UI
+  namespace: hello-world-ui
   labels:
     app: hello-world
 spec:
