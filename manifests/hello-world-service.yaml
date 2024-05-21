@@ -5,10 +5,10 @@ metadata:
   namespace: argocd
 
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 80
     targetPort: 80
-    nodePort:  30002
+
   selector:
     app: hello-world
