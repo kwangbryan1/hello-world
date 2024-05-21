@@ -4,7 +4,8 @@ metadata:
   name: hello-world-blue
   namespace: argocd
   labels:
-    name: hello-world-blue
+    app: hello-world
+    color: blue
 
 spec:
   type: ClusterIP
@@ -13,7 +14,8 @@ spec:
     targetPort: 80
 
   selector:
-    app: hello-world-blue
+    app: hello-world
+    color: blue
 
 
 ---
@@ -24,7 +26,8 @@ metadata:
   name: hello-world-green
   namespace: argocd
   labels:
-    name: hello-world-green
+    app: hello-world
+    color: green
 
 spec:
   type: ClusterIP
@@ -33,4 +36,5 @@ spec:
     targetPort: 80
 
   selector:
-    app: hello-world-green
+    app: hello-world
+    color: green
