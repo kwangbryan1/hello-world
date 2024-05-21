@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: hello-world-serivce
   namespace: hello-world-ui
-  labels:
-    app: hello-world
+
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - port: 80
     targetPort: 80
+    nodePort:  30000
   selector:
     app: hello-world

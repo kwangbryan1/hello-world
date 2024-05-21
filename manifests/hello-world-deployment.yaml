@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world-blue
-  namespace: hello-world-ui
+  namespace: hello-world-ui 
   labels:
     app: hello-world
     color: blue           # Unique label for blue version

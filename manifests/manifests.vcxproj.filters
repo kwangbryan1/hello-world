@@ -17,5 +17,7 @@
   <ItemGroup>
     <None Include="hello-world-deployment.yaml" />
     <None Include="hello-world-service.yaml" />
+    <None Include="hello-world-config.yaml" />
+    <None Include="hello-world-secret.yaml" />
   </ItemGroup>
 </Project>
