@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hello-world-serivce
-  namespace: hello-world-ui
+  namespace: argocd
 
 spec:
   type: NodePort

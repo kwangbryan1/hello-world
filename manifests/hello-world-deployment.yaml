@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world-blue
-  namespace: hello-world-ui 
+  namespace: argocd 
   labels:
     app: hello-world
     color: blue           # Unique label for blue version
@@ -28,7 +28,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world-green
-  namespace: hello-world-ui
+  namespace: argocd
   labels:
     app: hello-world
     color: green          # Unique label for green version
